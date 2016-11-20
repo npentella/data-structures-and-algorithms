@@ -3,7 +3,7 @@ require_relative 'errors'
 class FixedArray
 	attr_reader :size
 
-	def initialize(size)
+	def initialize(size=0)
 		@size = size
 		@elements = []
 	end
