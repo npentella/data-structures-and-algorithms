@@ -42,4 +42,19 @@ describe ArrayList do
 			expect(list.length).to eq(1)
 		end
 	end
+	describe 'ArrayList#insert(index, element)' do
+		it 'inserts element at specified index' do
+			list.add(1)
+			list.insert(0, 2)
+			expect(list.get(0)).to eq(2)
+		end
+		it 'moves values at later indexes to the right' do
+			list.add(1)
+			list.insert(0, 2)
+			expect(list.get(1)).to eq(1)
+		end
+		it 'raises out of bounds exception if no element present at given index' do
+			expect{ list.insert(1, 1) }.to raise_error(OutOfBoundsException)
+		end
+	end
 end

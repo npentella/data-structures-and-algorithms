@@ -26,6 +26,31 @@ class ArrayList
 		elements.get(index)
 	end
 
+	def set(index, value)
+		elements.set(index, value)
+	end
+
+	def length
+		elements.length
+	end
+
+	def insert(index, value)
+		new_array = FixedArray.new(elements.length + 1)
+		counter = 0
+		while counter < new_array.size
+			if counter == index
+				new_array.set(index, value)
+			elsif counter < index
+				new_array.set(counter, elements.get(counter))
+			else
+				new_array.set(counter, elements.get(counter - 1))
+			end
+			counter += 1
+		end
+		@elements = new_array
+		value
+	end
+
 	private
-	attr_reader :elements
+	attr_accessor :elements
 end
