@@ -10,7 +10,7 @@ describe ArrayList do
 	describe 'ArrayList#add(element)' do
 		it 'adds an element to end of list' do
 			list.add(2)
-			expect(list.get(0).to eq(2))
+			expect(list.get(0)).to eq(2)
 		end
 	end
 	describe 'ArrayList#get(index)' do

@@ -26,4 +26,10 @@ describe FixedArray do
   		expect {fixed_array.set(2, 3)}.to raise_error(OutOfBoundsException)
   	end
   end
+  describe 'FixedArray#length' do
+    it 'returns integer matching number of elements in FixedArray' do
+      fixed_array.set(0, 1)
+      expect(fixed_array.length).to eq(1)
+    end
+  end
 end
