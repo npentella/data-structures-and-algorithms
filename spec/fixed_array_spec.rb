@@ -1,4 +1,4 @@
-require_relative 'fixed_array'
+require_relative '../fixed_array'
 
 describe FixedArray do
 	let(:fixed_array) {FixedArray.new(2)}
@@ -25,5 +25,11 @@ describe FixedArray do
   	it 'raises Out of Bounds exception if user tries to get a value outside the array' do
   		expect {fixed_array.set(2, 3)}.to raise_error(OutOfBoundsException)
   	end
+  end
+  describe 'FixedArray#length' do
+    it 'returns integer matching number of elements in FixedArray' do
+      fixed_array.set(0, 1)
+      expect(fixed_array.length).to eq(1)
+    end
   end
 end

@@ -8,6 +8,10 @@ class FixedArray
 		@elements = []
 	end
 
+	def length
+		@elements.length
+	end
+
 	def set(index, element)
 		handle_out_of_bounds(index)
 		elements[index] = element
