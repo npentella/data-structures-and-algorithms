@@ -4,8 +4,7 @@ class ArrayList
 	attr_reader :size
 
 	def initialize
-		@size = 0
-		@elements = FixedArray.new(size)
+		@elements = FixedArray.new(1)
 	end
 
 	def add(element)
@@ -32,6 +31,10 @@ class ArrayList
 
 	def length
 		elements.length
+	end
+
+	def size
+		elements.size
 	end
 
 	def insert(index, value)

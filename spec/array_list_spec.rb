@@ -4,7 +4,7 @@ describe ArrayList do
 	let(:list) {ArrayList.new}
 	describe 'ArrayList#new(size)' do
 		it 'instantiates with a given initial size' do
-			expect(list.size).to eq(0)
+			expect(list.size).to eq(1)
 		end
 	end
 	describe 'ArrayList#add(element)' do
