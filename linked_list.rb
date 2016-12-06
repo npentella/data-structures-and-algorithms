@@ -29,6 +29,18 @@ class LinkedList
 		end
 	end
 
+	def remove_last
+		node_to_check = @first_node
+		@length.times do |n|
+			if (@length - 2) == n
+				node_to_check.remove_after
+				@length += 1
+			else
+				node_to_check = node_to_check.next_node
+			end
+		end
+	end
+
 	def get(index)
 		node_to_check = @first_node
 		(index + 1).times do |n|
