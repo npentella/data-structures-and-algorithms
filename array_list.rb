@@ -1,11 +1,9 @@
 require_relative "fixed_array"
 
 class ArrayList
-	attr_reader :size
 
-	def initialize(size=0)
-		@size = size
-		@elements = FixedArray.new(size)
+	def initialize
+		@elements = FixedArray.new(0)
 	end
 
 	def add(element)
@@ -32,6 +30,10 @@ class ArrayList
 
 	def length
 		elements.length
+	end
+
+	def size
+		elements.size
 	end
 
 	def insert(index, value)

@@ -3,7 +3,7 @@ require_relative '../array_list'
 describe ArrayList do
 	let(:list) {ArrayList.new}
 	describe 'ArrayList#new(size)' do
-		it 'instantiates with a given initial size' do
+		it 'instantiates with initial size of 0' do
 			expect(list.size).to eq(0)
 		end
 	end
