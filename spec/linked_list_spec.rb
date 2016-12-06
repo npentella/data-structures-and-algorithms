@@ -25,4 +25,17 @@ describe LinkedList do
 			expect(linked_list.get(0)).to eq("string")
 		end
 	end
+	describe 'LinkedList#remove_first' do
+		it 'removes element at front of list' do
+			linked_list.insert_first("string")
+			linked_list.remove_first
+			expect(linked_list.get(0)).to eq(nil)
+		end
+		it 'moves next element to front of list' do
+			linked_list.insert_first("string")
+			linked_list.insert_first(1)
+			linked_list.remove_first
+			expect(linked_list.get(0)).to eq("string")
+		end
+	end
 end
