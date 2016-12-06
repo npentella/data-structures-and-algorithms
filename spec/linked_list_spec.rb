@@ -45,4 +45,12 @@ describe LinkedList do
 			expect(linked_list.get(1)).to eq("string")
 		end
 	end
+	describe 'LinkedList#remove_last' do
+		it 'removes element from end of list' do
+			linked_list.insert_first(1)
+			linked_list.insert_last("string")
+			linked_list.remove_last
+			expect(linked_list.get(1)).to eq(nil)
+		end
+	end
 end
