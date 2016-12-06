@@ -64,4 +64,21 @@ class LinkedList
 		end
 		nil
 	end
+
+	def insert(index, element)
+		node_to_check = @first_node
+		before_node = nil
+		after_node = nil
+		(index + 1).times do |n|
+			if index - 1 == n
+				before_node = node_to_check
+			elsif index == n
+				after_node = node_to_check
+			end
+			node_to_check = node_to_check.next_node	
+		end
+		new_node = Node.new(element)
+		before_node.insert_after(new_node)
+		new_node.insert_after(after_node)
+	end
 end
