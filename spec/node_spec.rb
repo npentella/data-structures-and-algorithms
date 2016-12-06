@@ -6,7 +6,7 @@ describe Node do
 
 	describe 'Node#new(element)' do
 		it 'instantiates with given element' do
-			expect(node.element).to eq("string")
+			expect(node.value).to eq("string")
 		end
 	end
 	describe 'Node#insert_after(other_node)' do
