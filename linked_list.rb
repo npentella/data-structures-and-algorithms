@@ -17,6 +17,18 @@ class LinkedList
 		@first_node = @first_node.next_node
 	end
 
+	def insert_last(element)
+		node_to_check = @first_node
+		@length.times do |n|
+			if (@length - 1) == n
+				node_to_check.insert_after(Node.new(element))
+				@length += 1
+			else
+				node_to_check = node_to_check.next_node
+			end
+		end
+	end
+
 	def get(index)
 		node_to_check = @first_node
 		(index + 1).times do |n|
