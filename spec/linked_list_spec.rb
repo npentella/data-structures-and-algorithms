@@ -60,4 +60,18 @@ describe LinkedList do
 			expect(linked_list.get(0)).to eq("string")
 		end
 	end
+	describe 'LinkedList#insert(index, element)' do
+		it 'sets correct value at specified index' do
+			linked_list.insert_first("a")
+			linked_list.insert_first("b")
+			linked_list.insert(1, "c")
+			expect(linked_list.get(1)).to eq("c")
+		end
+		it 'moves element curetnly at given index to next index' do
+			linked_list.insert_first("a")
+			linked_list.insert_first("b")
+			linked_list.insert(1, "c")
+			expect(linked_list.get(2)).to eq("b")
+		end
+	end
 end
