@@ -38,4 +38,11 @@ describe LinkedList do
 			expect(linked_list.get(0)).to eq("string")
 		end
 	end
+	describe 'LinkedList#insert_last(element)' do
+		it 'inserts given element as last element in list' do
+			linked_list.insert_first(1)
+			linked_list.insert_last("string")
+			expect(linked_list.get(1)).to eq("string")
+		end
+	end
 end
