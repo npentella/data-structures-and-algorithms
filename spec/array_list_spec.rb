@@ -3,8 +3,8 @@ require_relative '../array_list'
 describe ArrayList do
 	let(:list) {ArrayList.new}
 	describe 'ArrayList#new(size)' do
-		it 'instantiates with a given initial size' do
-			expect(list.size).to eq(1)
+		it 'instantiates with initial size of 0' do
+			expect(list.size).to eq(0)
 		end
 	end
 	describe 'ArrayList#add(element)' do
@@ -54,6 +54,7 @@ describe ArrayList do
 			expect(list.get(1)).to eq(1)
 		end
 		it 'raises out of bounds exception if no element present at given index' do
+			p list
 			expect{ list.insert(1, 1) }.to raise_error(OutOfBoundsException)
 		end
 	end
