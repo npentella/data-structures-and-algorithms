@@ -25,7 +25,7 @@ describe Node do
 		it 'removes association with next node' do
 			node.insert_after(other_node)
 			node.remove_after
-			expect(node.next).to eq(nil)
+			expect(node.next_node).to eq(nil)
 		end
 	end
 end

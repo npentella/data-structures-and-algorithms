@@ -10,6 +10,10 @@ class Node
 		self.next_node = other_node
 	end
 
+	def remove_after
+		self.next_node = nil
+	end
+
 	private
 	attr_writer :value, :next_node
 end
