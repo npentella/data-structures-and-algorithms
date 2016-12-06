@@ -54,7 +54,6 @@ describe ArrayList do
 			expect(list.get(1)).to eq(1)
 		end
 		it 'raises out of bounds exception if no element present at given index' do
-			p list
 			expect{ list.insert(1, 1) }.to raise_error(OutOfBoundsException)
 		end
 	end
