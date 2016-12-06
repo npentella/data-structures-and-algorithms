@@ -15,7 +15,7 @@ describe Node do
 
 		it 'points to given node' do
 			node.insert_after(other_node)
-			expect(node.next).to eq(other_node)
+			expect(node.next_node).to eq(other_node)
 		end
 	end
 	describe 'Node#remove_after' do
