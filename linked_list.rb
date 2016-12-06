@@ -13,14 +13,19 @@ class LinkedList
 		@length += 1
 	end
 
+	def remove_first
+		@first_node = @first_node.next_node
+	end
+
 	def get(index)
 		node_to_check = @first_node
 		(index + 1).times do |n|
 			if index == n
-				return node_to_check.value
+				return node_to_check.value if node_to_check
 			else
 				node_to_check = node_to_check.next_node
 			end
 		end
+		nil
 	end
 end
