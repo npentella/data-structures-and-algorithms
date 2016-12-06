@@ -9,7 +9,7 @@ class LinkedList
 	end
 
 	def insert_first(element)
-		@first_node = Node.new(element)
+		@first_node = Node.new(element, @first_node)
 		@length += 1
 	end
 

@@ -1,9 +1,9 @@
 class Node
 	attr_reader :value, :next_node
 
-	def initialize(element)
+	def initialize(element, next_node=nil)
 		@value = element
-		@next_node = nil
+		@next_node = next_node
 	end
 
 	def insert_after(other_node)
