@@ -52,4 +52,16 @@ class LinkedList
 		end
 		nil
 	end
+
+	def set(index, element)
+		node_to_check = @first_node
+		(index + 1).times do |n|
+			if index == n
+				node_to_check.update_value(element)
+			else
+				node_to_check = node_to_check.next_node
+			end
+		end
+		nil
+	end
 end

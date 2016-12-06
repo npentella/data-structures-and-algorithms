@@ -14,6 +14,10 @@ class Node
 		self.next_node = nil
 	end
 
+	def update_value(element)
+		@value = element
+	end
+
 	private
 	attr_writer :value, :next_node
 end

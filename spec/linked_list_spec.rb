@@ -53,4 +53,11 @@ describe LinkedList do
 			expect(linked_list.get(1)).to eq(nil)
 		end
 	end
+	describe 'LinkedList#set(index, element' do
+		it 'updates node at given index with value of given element' do
+			linked_list.insert_first(1)
+			linked_list.set(0, "string")
+			expect(linked_list.get(0)).to eq("string")
+		end
+	end
 end
